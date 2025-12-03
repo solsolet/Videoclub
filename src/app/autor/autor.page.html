@@ -5,6 +5,28 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>Autor</h1>
-  <p>Contenido de ejemplo</p>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Aplicación desarrollada por Javier Gallego. A continuación puede consultar más información spbre el autor.
+    </ion-card-content>
+    <ion-item href="/src/app/portfolio/portfolio.page.html">
+      <ion-icon name="book-outline"></ion-icon>
+      <ion-label>Portfolio</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail"></ion-icon>
+      <ion-label>Correo: <a href="mailto:email@email.com">email@email.com</a></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-twitter"></ion-icon>
+      <ion-label>Twitter: <a href="https://x.com">@twitter</a></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call"></ion-icon>
+      <ion-label>Telefono: <a href="tel:+999888777">999888777</a></ion-label>
+    </ion-item>
+  </ion-card>
 </ion-content>
