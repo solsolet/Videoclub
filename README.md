@@ -29,3 +29,19 @@ const routes: Routes = [
 ```zsh
 ionic generate page <nombre_page>
 ```
+
+## Ejercicio 3
+### Ejercicio 3.2
+He probado a entrar y salir de la página de `autor` y me ha salido en este orden:
+```bash
+[Log] AutorPage ngOnInit (src_app_autor_autor_module_ts.js, line 68)
+[Log] ionViewWillEnter AutorPage (src_app_autor_autor_module_ts.js, line 71)
+[Log] ionViewDidEnter AutorPage (src_app_autor_autor_module_ts.js, line 74)
+[Log] ionViewWillLeave AutorPage (src_app_autor_autor_module_ts.js, line 78)
+[Log] ionViewDidLeave AutorPage (src_app_autor_autor_module_ts.js, line 81)
+[Log] ionViewWillEnter AutorPage (src_app_autor_autor_module_ts.js, line 71)
+[Log] ionViewDidEnter AutorPage (src_app_autor_autor_module_ts.js, line 74)
+[Log] ionViewWillLeave AutorPage (src_app_autor_autor_module_ts.js, line 78)
+[Log] ionViewDidLeave AutorPage (src_app_autor_autor_module_ts.js, line 81)
+[Log] AutorPage ngOnDestroy (src_app_autor_autor_module_ts.js, line 84)
+```

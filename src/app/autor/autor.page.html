@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Autora</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,7 +15,7 @@
     <ion-card-content>
       Aplicación desarrollada por Gemma Sellés. A continuación puede consultar más información sobre la autora.
     </ion-card-content>
-    <ion-item href="/src/app/portfolio/portfolio.page.html">
+    <ion-item button [routerLink]="['/portfolio']">
       <ion-icon aria-hidden="true" name="book-outline" slot="start"></ion-icon> <!-- aria- for the accesibility -->
       <ion-label>Portfolio</ion-label>
     </ion-item>

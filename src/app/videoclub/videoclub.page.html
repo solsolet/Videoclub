@@ -1,12 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Videoclub</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item button detail>
+    <ion-item button detail (click)="verPaginaDetalle(1)">
       <ion-thumbnail slot="start">
         <ion-img src="assets/posters/el_padrino.jpg"></ion-img>
       </ion-thumbnail>
@@ -16,7 +19,7 @@
         <p><strong>Año:</strong> 1972</p>
       </ion-label>
     </ion-item>
-    <ion-item button detail>
+    <ion-item button detail [routerLink]="['/detalle']">
       <ion-thumbnail slot="start">
         <ion-img src="assets/posters/el_padrino_2.jpg"></ion-img>
       </ion-thumbnail>
@@ -26,7 +29,7 @@
         <p><strong>Año:</strong> 1974</p>
       </ion-label>
     </ion-item>
-    <ion-item button detail>
+    <ion-item button detail [routerLink]="['/detalle']">
       <ion-thumbnail slot="start">
         <ion-img src="assets/posters/la_lista_de_schindler.jpg"></ion-img>
       </ion-thumbnail>
@@ -37,7 +40,7 @@
       </ion-label>
       <!-- <ion-button fill="clear" slot="end">View</ion-button> -->
     </ion-item>
-    <ion-item button detail>
+    <ion-item button detail [routerLink]="['/detalle']">
       <ion-thumbnail slot="start">
         <ion-img src="assets/posters/pulp_fiction.jpg"></ion-img>
       </ion-thumbnail>
@@ -47,7 +50,7 @@
         <p><strong>Año:</strong> 1994</p>
       </ion-label>
     </ion-item>
-    <ion-item button detail>
+    <ion-item button detail [routerLink]="['/detalle']">
       <ion-thumbnail slot="start">
         <ion-img src="assets/posters/cadena_perpetua.jpg"></ion-img>
       </ion-thumbnail>

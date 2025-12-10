@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-videoclub',
@@ -8,9 +9,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoclubPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  // MARK: Ciclo de vida
+  // Al cargar
   ngOnInit() {
+    console.log('VideoclubPage ngOnInit');
+  }
+
+  ionViewWillEnter(){
+    console.log('ionViewWillEnter VideoclubPage');
+  }
+
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter VideoclubPage');
+  }
+
+  // Al salir
+  ionViewWillLeave(){
+    console.log('ionViewWillLeave VideoclubPage');
+  }
+
+  ionViewDidLeave(){
+    console.log('ionViewDidLeave VideoclubPage');
+  }
+
+  ngOnDestroy() {
+     console.log('VideoclubPage ngOnDestroy');
+  }
+
+  // MARK: Enlace
+  verPaginaDetalle(id: number): void {
+    this.router.navigate(['/detalle', id]);
   }
 
 }
