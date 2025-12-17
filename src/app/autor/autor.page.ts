@@ -8,7 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AutorPage implements OnInit {
 
-  constructor() { }
+  autora:{
+    name: string,
+    email: string,
+    twitter: string,
+    phone: string
+  };
+
+  constructor() {
+    this.autora = {
+      name: 'Gemma Sellés Lloret',
+      email: 'gsl21@gcloud.ua.es',
+      twitter: 'https://twitter.com',
+      phone: '111222333'
+    };
+  }
 
   // Al cargar
   ngOnInit() {

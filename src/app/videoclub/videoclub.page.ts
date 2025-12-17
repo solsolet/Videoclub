@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+// import { PeliculasService } from '../../servises/peliculas.service';
 
 @Component({
   selector: 'app-videoclub',
