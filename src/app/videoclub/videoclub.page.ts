@@ -42,5 +42,4 @@ export class VideoclubPage implements OnInit {
   verPaginaDetalle(id: number): void {
     this.router.navigate(['/detalle', id]);
   }
-
 }

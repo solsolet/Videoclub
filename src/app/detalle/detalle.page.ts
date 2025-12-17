@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetallePage implements OnInit {
 
+  tituloDetalle: string = "Detalle de la película";
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   // Al cargar
@@ -16,6 +18,23 @@ export class DetallePage implements OnInit {
     console.log('DetallePage ngOnInit');
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     console.log("mira el id: " + id);
+    switch (id) {
+      case '1':
+        this.tituloDetalle = `Detalle peli ${id}`;
+        break;
+      case '2':
+        this.tituloDetalle = `Detalle peli ${id}`;
+        break;
+      case '3':
+        this.tituloDetalle = `Detalle peli ${id}`;
+        break;
+      case '4':
+        this.tituloDetalle = `Detalle peli ${id}`;
+        break;
+      case '5':
+        this.tituloDetalle = `Detalle peli ${id}`;
+        break;
+    }
   }
 
   ionViewWillEnter(){
