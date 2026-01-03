@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PeliculasService } from '../services/peliculas-service';
 
 @Component({
   selector: 'app-detalle',
@@ -10,8 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class DetallePage implements OnInit {
 
   tituloDetalle: string = "Detalle de la película";
+  pelicula: any;
+  //id: any; //no va
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private peliculaService: PeliculasService) { 
+    //this.pelicula = this.peliculaService.getPelicula(this.id); // no va
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.pelicula = this.peliculaService.getPelicula(Number(id));
+    console.log(this.pelicula);
+  }
 
   // Al cargar
   ngOnInit() {

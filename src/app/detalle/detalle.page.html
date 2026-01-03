@@ -3,20 +3,19 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{tituloDetalle}}</ion-title>
+    <ion-title>{{pelicula.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-card>
+  <ion-card *ngIf="pelicula">
     <ion-img src="assets/posters/el_padrino_2.jpg" alt="poster peli"></ion-img>
     <ion-card-header>
-      <ion-card-title>Título peli</ion-card-title>
+      <ion-card-title>{{pelicula.director}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Director: </p>
-      <p>Año: </p>
-      <p>Sinopsis: </p>
+      <p>Año: {{pelicula.year}}</p>
+      <p>Sinopsis: {{pelicula.synopsis}}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

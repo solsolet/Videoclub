@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { PeliculasService } from '../../servises/peliculas.service';
+import { PeliculasService } from '../services/peliculas-service';
 
 @Component({
   selector: 'app-videoclub',
@@ -10,7 +10,12 @@ import { Router } from '@angular/router';
 })
 export class VideoclubPage implements OnInit {
 
-  constructor(private router: Router) { }
+  listaPeliculas: any [];
+
+  constructor(private router: Router, private peliculasService: PeliculasService) { 
+    console.log(this.peliculasService.getPeliculas());
+    this.listaPeliculas = this.peliculasService.getPeliculas();
+  }
 
   // MARK: Ciclo de vida
   // Al cargar

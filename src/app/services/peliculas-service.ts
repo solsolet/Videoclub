@@ -55,4 +55,8 @@ export class PeliculasService {
   getPeliculas(){
     return this.peliculas;
   }
+
+  getPelicula(id: number): any {
+    return this.peliculas[id];
+  }
 }

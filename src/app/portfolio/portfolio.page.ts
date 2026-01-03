@@ -18,16 +18,16 @@ export class PortfolioPage implements OnInit {
   constructor() { 
     this.listaTrabajos = [
       { titulo: 'Game Boy Learning Adventure',
-        desc: 'Game Boy Leaning Adventure es un libro interactivo donde podrás aprender enamblador des de 0 en una aventura tipo Elige tu propia Aventura. Descubrirás poblados, personajes y sobre todo ¡aprenderás ensamblador para la mítica consola de Nintendo!',
+        desc: 'Game Boy Leaning Adventure es un libro interactivo donde podrás aprender ensamblador des de 0 en una aventura tipo Elige tu propia Aventura. Descubrirás poblados, personajes y sobre todo ¡aprenderás ensamblador para la mítica consola de Nintendo!',
         fecha: '2025',
       },
       { titulo: 'Two Wonders',
-        desc: 'Tu nueva aventura como aprendiz de mago està a punto de empezar... ✨',
+        desc: 'Tu nueva aventura como aprendiz de mago está a punto de empezar... ✨',
         fecha: '2024',
         enlace: 'https://kaiwagames.itch.io/two-wonders'
       },
       { titulo: 'One Wonder',
-        desc: 'Beeing a sorcerer\'s apprentice is quite difficult when you don\'t know how to cast spells...',
+        desc: 'Being a sorcerer\'s apprentice is quite difficult when you don\'t know how to cast spells...',
         fecha: '2023',
         enlace: 'https://kaiwa-ams1.itch.io/one-wonder'
       },
