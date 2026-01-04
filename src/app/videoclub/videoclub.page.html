@@ -20,15 +20,16 @@
     <ion-list *ngIf="modoLista == true; else modoGrid">
       <!-- Vista en modo lista -->
       <ion-item
-        *ngFor="let pelicula of listaPeliculas; index as id"
-        (click)="verPaginaDetalle(id)"
+        *ngFor="let pelicula of listaPeliculas"
+        (click)="verPaginaDetalle(pelicula.id)"
         detail
       >
         <ion-thumbnail slot="start">
-          <ion-img
-            src="../assets/posters/{{pelicula.poster}}"
-            alt="{{pelicula.title}}"
-          ></ion-img>
+          <!-- <ion-img
+                src="../assets/posters/{{pelicula.poster}}"
+                alt="{{pelicula.title}}"
+              /> -->
+          <ion-img [src]="pelicula.poster" alt="{{pelicula.title}}"></ion-img>
         </ion-thumbnail>
         <ion-label>
           <h2>{{pelicula.title}}</h2>
@@ -43,18 +44,15 @@
       <ion-grid>
         <ion-row>
           <ion-col
-            *ngFor="let pelicula of listaPeliculas; index as id"
-            (click)="verPaginaDetalle(id)"
+            *ngFor="let pelicula of listaPeliculas"
+            (click)="verPaginaDetalle(pelicula.id)"
             detail
             size-xs="6"
             size-sm="4"
             size-md="3"
           >
             <ion-card>
-              <ion-img
-                src="../assets/posters/{{pelicula.poster}}"
-                alt="{{pelicula.title}}"
-              />
+              <ion-img [src]="pelicula.poster" alt="{{pelicula.title}}" />
               <ion-card-header>
                 <ion-card-title>{{pelicula.title}}</ion-card-title>
               </ion-card-header>
